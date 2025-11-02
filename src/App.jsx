@@ -1,89 +1,93 @@
 import Header from './components/Header';
+import About from './components/About';
 import Features from './components/Features';
-import Testimonials from './components/Testimonials';
-import DownloadContact from './components/DownloadContact';
+import Community from './components/Community';
+import { Download, Mail, Phone } from 'lucide-react';
 
 function App() {
   return (
-    <div className="min-h-screen scroll-smooth bg-white text-gray-900">
-      {/* Home / Hero */}
+    <div className="font-inter text-gray-900">
       <Header />
-
-      {/* About */}
-      <section id="about" className="bg-gradient-to-b from-blue-50 to-white py-12 sm:py-16" aria-label="About Sahakari">
-        <div className="mx-auto max-w-5xl px-4">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">We Believe in Care Beyond Technology</h2>
-            <p className="mt-4 text-lg leading-relaxed text-gray-700">
-              Sahakari was created to bridge generations — connecting seniors who need assistance with young, motivated volunteers. Inspired by everyday moments of seniors struggling with tasks and feeling isolated, we set out to design a platform rooted in empathy, trust, and accessibility.
-            </p>
-          </div>
-
-          <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-100">
-              <h3 className="text-xl font-semibold text-gray-900">Mission</h3>
-              <p className="mt-2 text-gray-700">To empower seniors to live independently while fostering kindness and connection through volunteerism.</p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-100">
-              <h3 className="text-xl font-semibold text-gray-900">Our Story</h3>
-              <p className="mt-2 text-gray-700">Born from community observation and built with seniors at the center, Sahakari focuses on what truly matters: dignity, safety, and companionship.</p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-blue-100">
-              <h3 className="text-xl font-semibold text-gray-900">Values</h3>
-              <p className="mt-2 text-gray-700">Empathy • Trust • Simplicity • Accessibility • Connection</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features + AI highlight */}
+      <About />
       <Features />
+      <Community />
 
-      {/* For Volunteers */}
-      <section id="volunteers" className="bg-white py-12 sm:py-16" aria-label="For Volunteers">
-        <div className="mx-auto max-w-7xl px-4">
-          <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-            <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Be the Reason Someone Smiles Today</h2>
-              <p className="mt-3 text-lg text-gray-700">Gain new skills, build community connections, and make a real difference with flexible hours and meaningful impact.</p>
-              <ol className="mt-4 list-inside list-decimal text-gray-700">
-                <li>Signup</li>
-                <li>Match with Seniors</li>
-                <li>Assist &amp; Connect</li>
-                <li>Earn Rewards</li>
-              </ol>
-              <a
-                href="#download"
-                className="mt-5 inline-flex rounded-full bg-[#2B6CB0] px-6 py-3 text-base font-semibold text-white shadow-sm hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#2B6CB0] focus:ring-offset-2"
-                aria-label="Join as Volunteer"
-              >
+      {/* Download */}
+      <section id="download" aria-label="Download app" className="bg-gradient-to-b from-yellow-50 to-white py-12 sm:py-16">
+        <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
+          <div>
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Start Your Journey with Sahakari Today!</h2>
+            <p className="mt-3 text-lg text-gray-700">Available soon on your favorite app stores. Get early access updates.</p>
+            <div className="mt-5 flex flex-wrap gap-3">
+              <a href="#contact" className="inline-flex items-center gap-2 rounded-full bg-[#2B6CB0] px-6 py-3 text-base font-semibold text-white shadow-sm hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#2B6CB0] focus:ring-offset-2">
+                <Download className="h-5 w-5" aria-hidden="true" />
+                Get Download Link
+              </a>
+              <a href="#contact" className="inline-flex items-center justify-center rounded-full border-2 border-[#2B6CB0] px-6 py-3 text-base font-semibold text-[#2B6CB0] hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-[#2B6CB0] focus:ring-offset-2">
                 Join as Volunteer
               </a>
             </div>
-            <div aria-hidden className="relative">
-              <div className="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-blue-50 via-white to-yellow-50 p-6 shadow-sm ring-1 ring-blue-100">
-                <div className="grid h-full grid-cols-2 gap-4">
-                  <div className="rounded-xl bg-white shadow-inner ring-1 ring-blue-100" />
-                  <div className="rounded-xl bg-white shadow-inner ring-1 ring-blue-100" />
-                  <div className="col-span-2 rounded-xl bg-white shadow-inner ring-1 ring-blue-100" />
-                </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div className="rounded-2xl bg-white p-3 shadow-lg ring-1 ring-blue-100">
+              <div className="aspect-[9/19] w-full rounded-xl bg-gradient-to-b from-blue-100 to-blue-50 p-2">
+                <div className="h-full w-full rounded-lg bg-white shadow-inner" />
+              </div>
+            </div>
+            <div className="rounded-2xl bg-white p-3 shadow-lg ring-1 ring-blue-100">
+              <div className="aspect-[9/19] w-full rounded-xl bg-gradient-to-b from-yellow-100 to-yellow-50 p-2">
+                <div className="h-full w-full rounded-lg bg-white shadow-inner" />
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <Testimonials />
+      {/* Contact */}
+      <section id="contact" aria-label="Contact" className="bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-7xl px-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900">We’re here to help</h2>
+              <p className="mt-3 text-lg text-gray-700">Have questions or want to partner with us? Reach out anytime.</p>
+              <div className="mt-4 space-y-2 text-gray-800">
+                <p className="flex items-center gap-2"><Mail className="h-5 w-5 text-[#2B6CB0]" /> support@sahakari.org</p>
+                <p className="flex items-center gap-2"><Phone className="h-5 w-5 text-[#2B6CB0]" /> Senior helpline: 1800-000-2024</p>
+              </div>
+              <div className="mt-6 h-48 w-full overflow-hidden rounded-xl bg-blue-50">
+                <img
+                  src="https://api.mapbox.com/styles/v1/mapbox/light-v11/static/77.5946,12.9716,9/600x300?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYyd28yeGk1N3Z3N3gifQ.-J2oWQvY8h1wR7K5U8v7cw"
+                  alt="Map showing Sahakari presence"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
 
-      {/* Download + Contact + Map */}
-      <DownloadContact />
+            <form className="rounded-2xl border border-blue-100 bg-white p-6 shadow-sm" onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <label htmlFor="name" className="text-sm font-medium text-gray-900">Name</label>
+                <input id="name" name="name" type="text" required className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-[#2B6CB0] focus:outline-none focus:ring-2 focus:ring-[#2B6CB0]" />
+              </div>
+              <div className="mt-4">
+                <label htmlFor="email" className="text-sm font-medium text-gray-900">Email</label>
+                <input id="email" name="email" type="email" required className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-[#2B6CB0] focus:outline-none focus:ring-2 focus:ring-[#2B6CB0]" />
+              </div>
+              <div className="mt-4">
+                <label htmlFor="message" className="text-sm font-medium text-gray-900">Message</label>
+                <textarea id="message" name="message" rows={4} className="mt-1 w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-900 shadow-sm focus:border-[#2B6CB0] focus:outline-none focus:ring-2 focus:ring-[#2B6CB0]" />
+              </div>
+              <button type="submit" className="mt-5 w-full rounded-full bg-[#2B6CB0] px-6 py-3 font-semibold text-white shadow-sm hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[#2B6CB0] focus:ring-offset-2">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
 
-      {/* Footer */}
-      <footer className="border-t border-blue-100 bg-white py-8">
+      <footer className="bg-blue-900 py-8 text-blue-50">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
-          <p className="text-sm text-gray-600">© {new Date().getFullYear()} Sahakari. All rights reserved.</p>
-          <div className="text-sm text-gray-600">Future enhancements: Family dashboard • AI-based ranking • Telehealth • Community events</div>
+          <p className="text-center text-sm opacity-90">© {new Date().getFullYear()} Sahakari — Care with compassion.</p>
+          <div className="text-center text-sm opacity-90">Future: Family dashboard • AI volunteer ranking • Telehealth • Community events</div>
         </div>
       </footer>
     </div>
